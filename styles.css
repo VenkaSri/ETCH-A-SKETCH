@@ -1,0 +1,22 @@
+.box {
+    border: 1px solid #000;
+    
+}
+
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat( var(--repeatNumber, 2), 300px);
+    grid-template-rows: repeat( var(--repeatNumber, 2), 200px);
+}
+
+  .main-container {
+      border: 1px solid red;
+      width: 700px;
+      height: 600px;
+  }
+
+  .changeB {
+    background-color: red;
+}
