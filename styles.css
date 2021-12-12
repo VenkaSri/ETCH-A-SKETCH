@@ -12,9 +12,15 @@ body {
 .box {
     border: 1px solid #000;
     background-color: #eee;
-    border-width: 0.1em;
-        
+    border-width: 0.1em;      
 }
+
+.mainGrid {
+    border: 1px solid #000;
+    background-color: #eee;
+    
+}
+
 .outer-box {
     width: 150px;
     height: 150px;
