@@ -7,6 +7,9 @@
 
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap:  20px;
 }
 
 .box {
@@ -29,7 +32,7 @@ body {
     grid-template-rows: 50px 50px 50px;
 }
 
-.grid-customization {
+.grid_customization {
     height: 300px;
     width: 300px;
     background-color: #EFF3F4;
@@ -37,6 +40,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: flex-start;
+}
+
+.grid_settings {
+    height: 300px;
+    width: 300px;
+    background-color: #EFF3F4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.custom-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
 }
 
 
@@ -57,5 +79,34 @@ body {
     background-color: red;
 }
 
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+    gap: 30px;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+header .title {
+    font-weight: 900;
+    font-size: 3.5em;
+    color: #eee;
+}
+
+.footer {
+    height: 100px;
+    background-color: #E0A96D;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
 
 
