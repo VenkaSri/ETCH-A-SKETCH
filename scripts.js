@@ -3,7 +3,8 @@ const customGridContainer = document.querySelector('.outer-box');
 
 const linesColor = document.querySelector('#lines');
 const bgColor = document.querySelector('#bgColor');
-
+let someBgColor = '#eee';
+let someLinesColor = '#eee';
 
 customizeGrid();
 
@@ -63,14 +64,19 @@ function customizeGrid() {
 let divs = document.querySelectorAll('.box');
 divs.forEach((hoverableElement) => {
     bgColor.addEventListener('input', function(e) {
+        someBgColor = this.value;
         hoverableElement.addEventListener('mouseover', (e) => {
             hoverableElement.style.backgroundColor = this.value;
+            
+            console.log(someBgColor);
         }); 
     });
 });
 
     
-
+document.querySelector('.p').addEventListener('click', (e) => {
+    document.querySelector('.p').style.color = someBgColor;
+});
 
 
 
