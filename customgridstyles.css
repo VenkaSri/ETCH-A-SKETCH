@@ -1,0 +1,121 @@
+.grid-color {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 100px;
+    gap: 20px;
+    
+}
+
+.grid-lines-color {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.grid-lines-color-label {
+    align-self: center;
+    width: 78px;
+}
+
+.grid-bg-color {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.grid-bg-color-label {
+    align-self: center;
+    width: 78px;
+}
+
+.apply-button {
+    border: 1px solid red;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid_customization {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    gap: 10px;
+    background-color: #D8EDFF;
+    border: 1px solid #8BC9FF;
+   
+}
+
+.grid_settings {
+    height: 300px;
+    width: 300px;
+    background-color: #EFF3F4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.custom-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+#lines {
+    -webkit-appearance: none;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #d9514eff;
+    
+}
+
+#lines::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+
+#lines::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+
+#bgColor {
+    -webkit-appearance: none;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #d9514eff;
+    
+}
+
+#bgColor::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+
+#bgColor::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
