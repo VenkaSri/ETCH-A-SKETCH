@@ -1,6 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+}
+
 .box {
     border: 1px solid #000;
-    
+    background-color: #eee;
+    border-width: 0.1em;
+        
+}
+.outer-box {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+}
+
+.grid-customization {
+    height: 300px;
+    width: 300px;
+    background-color: #EFF3F4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -20,3 +50,6 @@
   .changeB {
     background-color: red;
 }
+
+
+
