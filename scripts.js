@@ -1,5 +1,5 @@
-const DEFAULT_LINES_COLOR = '#000000';
-const DEFAULT_BG_COLOR = '#ffffff';
+const DEFAULT_LINES_COLOR = '#eeeeee';
+const DEFAULT_BG_COLOR = '#000000';
 const DEFAULT_GRID_SIZE = 16;
 
 
@@ -11,9 +11,9 @@ const applyBtn = document.querySelector('.apply-button');
 const linesColor = document.querySelector('#lines');
 const bgColor = document.querySelector('#bgColor');
 let someBgColor = DEFAULT_BG_COLOR;
-let someLinesColor = DEFAULT_GRID_SIZE;
-let changedBgColor = DEFAULT_BG_COLOR;
-let changedLinesColor = DEFAULT_GRID_SIZE;
+let someLinesColor = DEFAULT_LINES_COLOR;
+let bgClr = DEFAULT_BG_COLOR;
+let lineClr = DEFAULT_LINES_COLOR;
 
 
 
@@ -59,7 +59,7 @@ linesColor.addEventListener('input', function(e) {
     for (i = 0; i < box.length; ++i) {
         box[i].style.borderColor = this.value;
         someLinesColor = this.value;
-        changedLinesColor = someLinesColor;
+        lineClr = this.value;
     }
 });
 
@@ -72,7 +72,7 @@ let bDivs = document.querySelectorAll('.box');
 bDivs.forEach((hoverableElement) => {
     bgColor.addEventListener('input', function(e) {
         someBgColor = this.value;
-        changedBgColor = someBgColor;
+        
         hoverableElement.addEventListener('mouseover', (e) => {
             hoverableElement.style.backgroundColor = someBgColor;
             
@@ -86,29 +86,25 @@ bDivs.forEach((hoverableElement) => {
 
 
 applyBtn.addEventListener('click', (e) => {
-    if (someBgColor !== changedBgColor && someLinesColor !== changedLinesColor) {
-        clearCurrentBgColor();
-    }
+    checkMatch();
+    bgClr = someBgColor;
     let mDivs = document.querySelectorAll('.mainGrid');
 mDivs.forEach((hoverableElement) => {
         hoverableElement.addEventListener('mouseover', (e) => {
-        hoverableElement.style.backgroundColor = someBgColor;    
+        hoverableElement.style.backgroundColor = bgClr;    
             
     });
     for (i = 0; i < mDivs.length; ++i) {
-        mDivs[i].style.borderColor = someLinesColor;
+        mDivs[i].style.borderColor = lineClr;
         
     } 
 });
 });
 
 function changeBgColor() {
-let mDivs = document.querySelectorAll('.mainGrid');
-mDivs.forEach((hoverableElement) => {
-        hoverableElement.addEventListener('mouseover', (e) => {
-        hoverableElement.style.backgroundColor = '#000000';          
-    });
-});
+    mouserOverMainGrid(DEFAULT_BG_COLOR);
+    mouserOverCustomizeableGrid(DEFAULT_BG_COLOR);
+
 }
 
 function changeLineColor() {
@@ -120,15 +116,39 @@ function changeLineColor() {
 
 function clearCurrentBgColor() {
     let box = document.querySelectorAll('.mainGrid');
-    for (i = 0; i < box.length; ++i) {
-        box[i].style.borderColor = '#000000';
-        box[i].style.backgroundColor = '#ffffff';
+    
+        
         
     }
+
+
+function mouserOverMainGrid(color) {
+    let mDivs = document.querySelectorAll('.mainGrid');
+    mDivs.forEach((hoverableElement) => {
+            hoverableElement.addEventListener('mouseover', (e) => {
+            hoverableElement.style.backgroundColor = color;          
+        });
+    });
+}
+
+function mouserOverCustomizeableGrid(color) {
+    let mDivs = document.querySelectorAll('.box');
+    mDivs.forEach((hoverableElement) => {
+            hoverableElement.addEventListener('mouseover', (e) => {
+            hoverableElement.style.backgroundColor = color;          
+        });
+    });
 }
 
 
-
+function checkMatch() {
+    if (someBgColor !== bgClr) {
+        let mDivs = document.querySelectorAll('.mainGrid');
+        for (i = 0; i < mDivs.length; ++i) {
+        mDivs[i].style.backgroundColor = 'ffffff';
+    }
+    } 
+}
 
 
     

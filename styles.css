@@ -20,8 +20,8 @@ body {
 }
 
 .box {
-    border: 1px solid #000;
-    background-color: #eee;
+    border: 1px solid #eee;
+    background-color: #fff;
     border-width: 0.1em;      
 }
 
