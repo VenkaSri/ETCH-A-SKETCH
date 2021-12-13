@@ -27,7 +27,7 @@ body {
 
 .mainGrid {
     border: 1px solid #000;
-    background-color: #eee;
+    background-color: #FFF;
     
 }
 
@@ -52,14 +52,14 @@ body {
 }
 
   .main-container {
-      border: 1px solid red;
-      width: 700px;
-      height: 600px;
+    border: 3px solid #78C0FF;
+    width: 703px;
+    height: 623px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .changeB {
-    background-color: red;
-}
 
 main {
     display: flex;
@@ -90,6 +90,10 @@ header .title {
     justify-content: center;
     align-items: center;
     border-top: 1px solid #8BC9FF;   
+}
+
+footer {
+    margin-top: auto;
 }
 
 
