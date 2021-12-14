@@ -65,7 +65,6 @@ bDivs.forEach((hoverableElement) => {
 });
 
 applyBtn.addEventListener("click", (e) => {
-    
   checkMatch();
   bgClr = someBgColor;
   let mDivs = document.querySelectorAll(".mainGrid");
@@ -90,7 +89,6 @@ function changeLineColor() {
     mDivs[i].style.borderColor = DEFAULT_LINES_COLOR;
   }
 }
-
 
 function mouserOverMainGrid(color) {
   let mDivs = document.querySelectorAll(".mainGrid");
@@ -117,4 +115,12 @@ function checkMatch() {
       mDivs[i].style.backgroundColor = "#ffffff";
     }
   }
+}
+
+let slider = document.querySelector("#myRange");
+let output = document.querySelector("#grid-size");
+output.innerHTML = '16x16';
+
+slider.oninput = function() {
+  output.innerHTML = this.value + "x" + this.value;
 }
