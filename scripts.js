@@ -1,11 +1,12 @@
 const DEFAULT_LINES_COLOR = "#eeeeee";
-const DEFAULT_BG_COLOR = "#000000";
+const DEFAULT_BG_COLOR = "#ffffff";
+const DEFAULT_MO_COLOR = "#000000";
 const DEFAULT_GRID_SIZE = 16;
 
 const container = document.querySelector(".main-container");
 const customGridContainer = document.querySelector(".outer-box");
 const applyBtn = document.querySelector(".apply-button");
-
+const resetBtn = document.querySelector(".reset-button");
 const linesColor = document.querySelector("#lines");
 const bgColor = document.querySelector("#bgColor");
 let someBgColor = DEFAULT_BG_COLOR;
@@ -79,8 +80,8 @@ applyBtn.addEventListener("click", (e) => {
 });
 
 function changeBgColor() {
-  mouserOverMainGrid(DEFAULT_BG_COLOR);
-  mouserOverCustomizeableGrid(DEFAULT_BG_COLOR);
+  mouserOverMainGrid(DEFAULT_MO_COLOR);
+  mouserOverCustomizeableGrid(DEFAULT_MO_COLOR);
 }
 
 function changeLineColor() {
@@ -117,7 +118,29 @@ function checkMatch() {
   }
 }
 
-let slider = document.querySelector("#myRange");
+
+function mainGridBg(color) {
+  let mDivs = document.querySelectorAll(".mainGrid");
+  for (i = 0; i < mDivs.length; ++i) {
+    mDivs[i].style.backgroundColor = color;
+  }
+}
+
+function mainGridLine(color) {
+  let mDivs = document.querySelectorAll(".mainGrid");
+  for (i = 0; i < mDivs.length; ++i) {
+    mDivs[i].style.borderColor = color;
+  }
+}
+
+resetBtn.addEventListener('click', () => {
+  mainGridBg(DEFAULT_BG_COLOR);
+  mainGridLine(DEFAULT_LINES_COLOR);
+});
+
+
+
+let slider = document.querySelector("#sRange");
 let output = document.querySelector("#grid-size");
 output.innerHTML = '16x16';
 
