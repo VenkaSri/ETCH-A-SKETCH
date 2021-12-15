@@ -17,7 +17,7 @@
     <div class="main-container"></div>
     <div class="custom-grid">
     <div class="grid_customization">
-        <p class="grid_customization_title">GRID PREVIEW</p>
+        <p class="grid_customization_title">GRID SETTINGS</p>
         <div class="outer-box">
         </div>
         <div class="grid-color">
@@ -30,16 +30,17 @@
                 <label for="lines" class="grid-bg-color-label">Paint Color:</label>
             </div>
         </div>
+        <div class="slidecontainer">
+            <input type="range" min="2" max="32" class="slider" id="sRange">
+            <p>Grid size: <span id="grid-size"></span></p>
+          </div>
         <div>
             <div class="apply-button">APPLY CHANGES</div>
         </div>
     </div>
     <div class="grid_settings">
-        <p class="grid_customization_title">GRID SETTINGS</p>
-        <div class="slidecontainer">
-            <input type="range" min="2" max="100" class="slider" id="sRange">
-            <p>Grid size: <span id="grid-size"></span></p>
-          </div>
+        <p class="grid_customization_title">EXTRA OPTIONS</p>
+        
         <div>
             <div class="color-mode-button">COLOR MODE</div>
         </div>

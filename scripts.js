@@ -16,7 +16,24 @@ let lineClr = DEFAULT_LINES_COLOR;
 
 //let num = prompt('what Number');;
 
-AppendElements(DEFAULT_GRID_SIZE);
+let gridSize = DEFAULT_GRID_SIZE;
+
+
+
+let slider = document.querySelector("#sRange");
+let output = document.querySelector("#grid-size");
+output.innerHTML = '16x16';
+
+slider.oninput = function() {
+  
+  gridSize = this.value;
+  output.innerHTML = this.value + "x" + this.value;
+  
+}
+AppendElements(gridSize);
+
+
+
 customizeGrid();
 changeBgColor();
 changeLineColor();
@@ -139,11 +156,3 @@ resetBtn.addEventListener('click', () => {
 });
 
 
-
-let slider = document.querySelector("#sRange");
-let output = document.querySelector("#grid-size");
-output.innerHTML = '16x16';
-
-slider.oninput = function() {
-  output.innerHTML = this.value + "x" + this.value;
-}
