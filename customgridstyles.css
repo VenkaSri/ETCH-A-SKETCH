@@ -39,7 +39,20 @@
     color: #0080EE;
 }
 
-.apply-button,
+.apply-button {
+    border: 1px solid #51FF3A;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #B9FFB0;
+    color: #1CED00;
+    margin-bottom: 10px;
+}
+
 .color-mode-button,
 .eraser-button {
     border: 1px solid #78C0FF;
@@ -74,7 +87,11 @@
     background-color: #E68787;
 }
 
-.apply-button:hover,
+.apply-button:hover{
+    background-color: #85FF75;
+    color: #FFFFFf;
+}
+
 .color-mode-button:hover,
 .eraser-button:hover {
     background-color: #8BC9FF;

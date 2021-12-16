@@ -47,8 +47,6 @@ body {
 
 .gridContainer {
     display: grid;
-    grid-template-columns: repeat( var(--repeatNumber, 2), 300px);
-    grid-template-rows: repeat( var(--repeatNumber, 2), 200px);
 }
 
   .main-container {
