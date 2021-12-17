@@ -86,11 +86,7 @@ bDivs.forEach((hoverableElement) => {
 applyBtn.addEventListener("click", (e) => {
   checkMatch();
   bgClr = someBgColor;
-  if (gridSize !== DEFAULT_GRID_SIZE) {
-    removeElements();
-    AppendElements(gridSize);
-    
-  }
+
   
   let mDivs = document.querySelectorAll(".mainGrid");
   mDivs.forEach((hoverableElement) => {
@@ -133,6 +129,7 @@ function mouserOverCustomizeableGrid(color) {
   });
 }
 
+// resets main grid's paint color is the different from the user's selection
 function checkMatch() {
   if (someBgColor !== bgClr) {
     let mDivs = document.querySelectorAll(".mainGrid");
