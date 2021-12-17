@@ -67,6 +67,8 @@ bDivs.forEach((hoverableElement) => {
 applyBtn.addEventListener("click", (e) => {
     
   checkMatch(); 
+  removeElements();
+  AppendElements(grid);
   bgClr = someBgColor;
   let mDivs = document.querySelectorAll(".mainGrid");
   mDivs.forEach((hoverableElement) => {
@@ -117,4 +119,8 @@ function checkMatch() {
       mDivs[i].style.backgroundColor = "#ffffff";
     }
   }
+}
+function removeElements() {
+  let gC = document.querySelector(".gridContainer");
+  gC.remove();
 }
