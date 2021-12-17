@@ -66,7 +66,7 @@ bDivs.forEach((hoverableElement) => {
 
 applyBtn.addEventListener("click", (e) => {
     
-  checkMatch();
+  checkMatch(); 
   bgClr = someBgColor;
   let mDivs = document.querySelectorAll(".mainGrid");
   mDivs.forEach((hoverableElement) => {
