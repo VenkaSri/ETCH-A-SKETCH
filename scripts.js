@@ -162,3 +162,7 @@ eraserBtn.addEventListener('click', () => {
   mouserOverCustomizeableGrid("white");
 });
 
+function removeElements() {
+  let gC = document.querySelector(".gridContainer");
+  gC.remove();
+}
