@@ -1,5 +1,5 @@
 const DEFAULT_LINES_COLOR = "#eeeeee";
-const DEFAULT_BG_COLOR = "#ffffff";
+const DEFAULT_BG_COLOR = "#000000";
 const DEFAULT_MO_COLOR = "#000000";
 const DEFAULT_GRID_SIZE = 16;
 
@@ -12,12 +12,10 @@ const linesColor = document.querySelector("#lines");
 const bgColor = document.querySelector("#bgColor");
 let someBgColor = DEFAULT_BG_COLOR;
 let someLinesColor = DEFAULT_LINES_COLOR;
+let someGridSize = DEFAULT_GRID_SIZE;
+let gridSize = DEFAULT_GRID_SIZE;;
 let bgClr = DEFAULT_BG_COLOR;
 let lineClr = DEFAULT_LINES_COLOR;
-
-//let num = prompt('what Number');;
-
-let gridSize = DEFAULT_GRID_SIZE;
 
 
 
@@ -27,14 +25,13 @@ output.innerHTML = '16x16';
 
 slider.oninput = function() {
   
-  gridSize = this.value;
+  someGridSize = this.value;
+
   output.innerHTML = this.value + "x" + this.value;
   
 }
 
-
-
-
+AppendElements(DEFAULT_GRID_SIZE);
 customizeGrid();
 changeBgColor();
 changeLineColor();
@@ -84,23 +81,26 @@ bDivs.forEach((hoverableElement) => {
 });
 
 applyBtn.addEventListener("click", (e) => {
-  checkMatch();
+
+  checkMatch(); 
+  if (someGridSize !== gridSize) {
+    removeElements();
+    AppendElements(someGridSize);
+    someGridSize = gridSize;
+  }
+  
   bgClr = someBgColor;
-  AppendElements(gridSize);
   let mDivs = document.querySelectorAll(".mainGrid");
-  mDivs.forEach((hoverableElement) => {
-    hoverableElement.addEventListener("mouseover", (e) => {
-      hoverableElement.style.backgroundColor = bgClr;
-    });
-    for (i = 0; i < mDivs.length; ++i) {
-      mDivs[i].style.borderColor = lineClr;
-    }
-  });
+  mouserOverMainGrid(bgClr);
+  for (i = 0; i < mDivs.length; ++i) {
+    mDivs[i].style.borderColor = lineClr;
+  }
+
 });
 
 function changeBgColor() {
-  mouserOverMainGrid(DEFAULT_MO_COLOR);
-  mouserOverCustomizeableGrid(DEFAULT_MO_COLOR);
+  mouserOverMainGrid(DEFAULT_BG_COLOR);
+  mouserOverCustomizeableGrid(DEFAULT_BG_COLOR);
 }
 
 function changeLineColor() {
@@ -109,6 +109,7 @@ function changeLineColor() {
     mDivs[i].style.borderColor = DEFAULT_LINES_COLOR;
   }
 }
+
 
 function mouserOverMainGrid(color) {
   let mDivs = document.querySelectorAll(".mainGrid");
@@ -138,6 +139,7 @@ function checkMatch() {
 }
 
 
+
 function mainGridBg(color) {
   let mDivs = document.querySelectorAll(".mainGrid");
   for (i = 0; i < mDivs.length; ++i) {
@@ -153,13 +155,18 @@ function mainGridLine(color) {
 }
 
 resetBtn.addEventListener('click', () => {
-  mainGridBg(DEFAULT_BG_COLOR);
+  removeElements();
+  AppendElements(DEFAULT_GRID_SIZE);
+  mouserOverMainGrid("black")
   mainGridLine(DEFAULT_LINES_COLOR);
+  output.innerHTML = '16x16';
+  slider.value = 16;
+
 });
 
 eraserBtn.addEventListener('click', () => {
-  mouserOverMainGrid(DEFAULT_BG_COLOR);
-  mouserOverCustomizeableGrid("white");
+  mouserOverMainGrid(DEFAULT_MO_COLOR);
+
 });
 
 function removeElements() {
