@@ -39,8 +39,21 @@
     color: #0080EE;
 }
 
-.apply-button,
-.color-mode-button,
+.apply-button {
+    border: 1px solid #51FF3A;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #B9FFB0;
+    color: #1CED00;
+    margin-bottom: 10px;
+}
+
+.color-button,
 .eraser-button {
     border: 1px solid #78C0FF;
     width: 150px;
@@ -74,15 +87,19 @@
     background-color: #E68787;
 }
 
-.apply-button:hover,
-.color-mode-button:hover,
+.apply-button:hover{
+    background-color: #85FF75;
+    color: #FFFFFf;
+}
+
+.color-button:hover,
 .eraser-button:hover {
     background-color: #8BC9FF;
 }
 
 
 .grid_customization {
-    height: 300px;
+    height: 350px;
     width: 300px;
     border-radius: 10px;
     display: flex;
@@ -108,13 +125,14 @@
     background-color: #D8EDFF;
     border: 1px solid #78C0FF;
     margin-left: 90px;
-    gap: 30px;
+    gap: 15px;
 }
 
 .custom-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    height: 623px;
     
 }
 
@@ -147,8 +165,8 @@
 #bgColor {
     -webkit-appearance: none;
     padding: 0;
-    border: none;
     border-radius: 10px;
+    border: none;
     width: 30px;
     height: 30px;
     background-color: #D8EDFF;
@@ -163,7 +181,15 @@
 }
 
 #bgColor::-webkit-color-swatch-wrapper {
-    border: none;
+    border: 1px solid #78C0FF;
     border-radius: 50%;
     padding: 0;
+}
+
+#grid-size {
+    color: #0080EE;
+}
+
+.slidecontainer p {
+    color: #0080EE;
 }
