@@ -11,6 +11,7 @@ const colorBtn = document.querySelector(".color-button");
 const eraserBtn = document.querySelector(".eraser-button");
 const linesColor = document.querySelector("#lines");
 const bgColor = document.querySelector("#bgColor");
+const year = document.querySelector(".year");
 let someBgColor = DEFAULT_MO_COLOR;
 let someLinesColor = DEFAULT_LINES_COLOR;
 let someGridSize = DEFAULT_GRID_SIZE;
@@ -195,3 +196,6 @@ colorBtn.addEventListener("click", () => {
   mainGridBg(DEFAULT_BG_COLOR);
   colorMode();
 });
+
+const date = new Date();
+year.innerHTML = date.getFullYear();
