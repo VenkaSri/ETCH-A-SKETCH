@@ -12,7 +12,7 @@ Before starting the project, I [sketched](https://i.imgur.com/iT5wHTs.jpg) out a
 - Deepened knowledge of DOM and how to manipulate them
 
 ### Demo
-![Demo](https://i.imgur.com/HPUymNK.mp4)
+![Demo](https://i.imgur.com/HPUymNK.gif)
 
 ### Tools
 - Visual Studio Code
