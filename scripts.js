@@ -4,13 +4,13 @@ const DEFAULT_MO_COLOR = "#000000";
 const DEFAULT_GRID_SIZE = 16;
 
 const container = document.querySelector(".main-container");
-const customGridContainer = document.querySelector(".outer-box");
+const previewGridContainer = document.querySelector(".preview-grid-container");
 const applyBtn = document.querySelector(".apply-button");
 const resetBtn = document.querySelector(".reset-button");
 const colorBtn = document.querySelector(".color-button");
 const eraserBtn = document.querySelector(".eraser-button");
-const linesColor = document.querySelector("#lines");
-const bgColor = document.querySelector("#bgColor");
+const gridLinesColor = document.querySelector("#lines");
+const gridBgColor = document.querySelector("#bgColor");
 const year = document.querySelector(".year");
 let someBgColor = DEFAULT_MO_COLOR;
 let someLinesColor = DEFAULT_LINES_COLOR;
@@ -51,12 +51,12 @@ function AppendElements(num) {
 function customizeGrid() {
   for (let i = 0; i < 6; i++) {
     const div = document.createElement("div");
-    customGridContainer.append(div);
+    previewGridContainer.append(div);
     div.classList.add("box");
   }
 }
 
-linesColor.addEventListener("input", function (e) {
+gridLinesColor.addEventListener("input", function (e) {
   let box = document.querySelectorAll(".box");
   for (i = 0; i < box.length; ++i) {
     box[i].style.borderColor = this.value;
@@ -67,7 +67,7 @@ linesColor.addEventListener("input", function (e) {
 
 let bDivs = document.querySelectorAll(".box");
 bDivs.forEach((hoverableElement) => {
-  bgColor.addEventListener("input", function (e) {
+  gridBgColor.addEventListener("input", function (e) {
     someBgColor = this.value;
 
     hoverableElement.addEventListener("mouseover", (e) => {
@@ -166,8 +166,8 @@ resetBtn.addEventListener("click", () => {
   someBgColor = DEFAULT_MO_COLOR;
   someLinesColor = DEFAULT_LINES_COLOR;
   lineClr = DEFAULT_LINES_COLOR;
-  bgColor.value = DEFAULT_MO_COLOR;
-  linesColor.value = DEFAULT_LINES_COLOR;
+  gridBgColor.value = DEFAULT_MO_COLOR;
+  gridLinesColor.value = DEFAULT_LINES_COLOR;
   resetPreviewGrid();
 });
 

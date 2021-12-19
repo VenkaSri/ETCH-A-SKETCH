@@ -7,7 +7,7 @@
     <title>ETCH-A-SKETCH</title>
     <script src="scripts.js" defer></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="customgridstyles.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="shortcut icon" type="image/png" href="images/ticon.png">
 </head>
 <body>
@@ -15,50 +15,53 @@
         <h1 class="title">ETCH-A-SKETCH</h1>        
     </header>
     <main>
-    <div class="main-container"></div>
-    <div class="custom-grid">
-    <div class="grid_customization">
-        <p class="grid_customization_title">GRID SETTINGS</p>
-        <div class="outer-box">
+        <div class="main-container-outline">
+            <div class="main-container"></div>
         </div>
-        <div class="grid-color">
-            <div class="grid-lines-color">
-                <input type="color" id="lines" value="#eeeeee"/>
-                <label for="lines" class="grid-lines-color-label">Grid Lines:</label>
+        <div class="grid-settings-options">
+            <div class="grid-settings">
+                <p class="grid-settings-title">GRID SETTINGS</p>
+                <div class="preview-grid-container">
+                </div>
+                <div class="preview-grid-colors">
+                    <div class="grid-lines-color">
+                        <input type="color" id="lines" value="#eeeeee"/>
+                        <label for="lines" class="grid-lines-color-label">Grid Lines:</label>
+                    </div>
+                    <div class="grid-bg-color">
+                        <input type="color" id="bgColor" value="#000000"/>
+                        <label for="lines" class="grid-bg-color-label">Paint Color:</label>
+                    </div>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="2" max="100" class="slider" id="sRange">
+                    <p>Grid size: <span id="grid-size"></span></p>
+                    </div>
+                <div>
+                    <div class="apply-button">APPLY CHANGES</div>
+                </div>
             </div>
-            <div class="grid-bg-color">
-                <input type="color" id="bgColor" value="#000000"/>
-                <label for="lines" class="grid-bg-color-label">Paint Color:</label>
+            <div class="grid-options">
+                <p class="grid-settings-title">EXTRA OPTIONS</p>
+                
+                <div>
+                    <div class="color-button">COLOR MODE</div>
+                </div>
+                <div>
+                    <div class="eraser-button">ERASER</div>
+                </div>
+                <div>
+                    <div class="reset-button">RESET GRID</div>
+                </div>
             </div>
         </div>
-        <div class="slidecontainer">
-            <input type="range" min="2" max="32" class="slider" id="sRange">
-            <p>Grid size: <span id="grid-size"></span></p>
-          </div>
-        <div>
-            <div class="apply-button">APPLY CHANGES</div>
-        </div>
-    </div>
-    <div class="grid_settings">
-        <p class="grid_customization_title">EXTRA OPTIONS</p>
-        
-        <div>
-            <div class="color-button">COLOR MODE</div>
-        </div>
-        <div>
-            <div class="eraser-button">ERASER</div>
-        </div>
-        <div>
-            <div class="reset-button">RESET GRID</div>
-        </div>
-    </div>
-</div>
     </main>
     <footer>
         <div class="footer">
             <div class="copyright">
                 <p>Copyright &copy; Venka <span class="year"></span></p>
                 <a href="https://github.com/VenkaSri/ETCH-A-SKETCH"><img src="images/icon.png" alt="Github icon"></a>
+            </div>
         </div>
     </footer>
 </body>

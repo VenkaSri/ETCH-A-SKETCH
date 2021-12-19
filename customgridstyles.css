@@ -136,6 +136,11 @@
     
 }
 
+#grid-size,
+.slidecontainer p {
+    color: #0080EE;
+}
+
 /* https://stackoverflow.com/questions/41884538/how-to-change-html5-color-input-inner-radius */
 
 #lines {
@@ -186,10 +191,3 @@
     padding: 0;
 }
 
-#grid-size {
-    color: #0080EE;
-}
-
-.slidecontainer p {
-    color: #0080EE;
-}

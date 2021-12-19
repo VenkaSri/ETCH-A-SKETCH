@@ -1,123 +1,265 @@
-/*
-background-color: #2a2b2dff;
-background-color: #2da8d8ff;
-background-color: #d9514eff;
-*/
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap:  20px;
-    background-color: #ECF6FF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ecf6ff;
 }
 
 .box {
-    border: 1px solid #eee;
-    background-color: #fff;
-    border-width: 0.1em;      
+  border: 1px solid #eee;
+  background-color: #fff;
+  border-width: 0.1em;
 }
 
 .mainGrid {
-    border: 1px solid #000;
-    background-color: #FFF;
-    
+  border: 1px solid #000;
+  background-color: #fff;
 }
 
-.outer-box {
-    width: 150px;
-    height: 100px;
-    display: grid;
-    grid-template-columns: 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px;
-    margin-top: px;
+.preview-grid-container {
+  width: 150px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
 }
-
-
-
-
-
 
 .gridContainer {
-    display: grid;
+  display: grid;
 }
 
-  .main-container {
-    border: 3px solid #78C0FF;
-    width: 703px;
-    height: 623px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
+.main-container {
+  border: 3px solid #78c0ff;
+  width: 703px;
+  height: 623px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 main {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    margin-right: 200px;
-    gap: 30px;
-    
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-right: 200px;
+  gap: 30px;
 }
 
 header {
-    display: flex;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
 }
 
 header .title {
-    font-weight: 900;
-    font-size: 3.5em;
-    color: #0080EE;
+  font-weight: 900;
+  font-size: 3.5em;
+  color: #0080ee;
 }
 
-.footer {
-    height: 70px;
-    background-color: #D8EDFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid #8BC9FF;   
+.preview-grid-colors {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 100px;
+  gap: 20px;
+  
 }
 
-footer {
-    margin-top: auto;
+.grid-settings-title {
+  color: #0080EE;
+  margin-top: 5px;
+  border-bottom: 1px solid #78C0FF;
 }
 
-.copyright {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.grid-lines-color {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 30px;
 }
 
-.copyright a {
-    width: 24px;
-    height: 20px;
-    align-self: center;
-
+.grid-lines-color-label {
+  align-self: center;
+  width: 78px;
+  color: #0080EE;
 }
 
-.copyright p {
-    color: #0080EE;
-    font-size: 20px;
+.grid-bg-color {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 30px;
 }
 
+.grid-bg-color-label {
+  align-self: center;
+  width: 78px;
+  color: #0080EE;
+}
 
-/* https://codepen.io/giana/pen/BZaGyP */
-.copyright a:hover,
-.copyright a:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
+.apply-button {
+  border: 1px solid #51FF3A;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #B9FFB0;
+  color: #24680E;
+  margin-bottom: 10px;
+}
+
+.color-button,
+.eraser-button {
+  border: 1px solid #78C0FF;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #B2DBFF;
+  color: #0080EE;
+  margin-bottom: 10px;
+}
+
+.reset-button {
+  border: 1px solid #E68787;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ECA5A5;
+  color: #D32E2E;
+  margin-bottom: 10px;
+}
+
+.reset-button:hover {
+  background-color: #E68787;
+}
+
+.apply-button:hover{
+  background-color: #85FF75;
+  color: #FFFFFf;
+}
+
+.color-button:hover,
+.eraser-button:hover {
+  background-color: #8BC9FF;
+}
+
+.grid-settings {
+  height: 350px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  background-color: #D8EDFF;
+  border: 1px solid #78C0FF;
+  margin-left: 90px;
+}
+
+.grid-options {
+  height: 300px;
+  width: 300px;
+  background-color: #EFF3F4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  background-color: #D8EDFF;
+  border: 1px solid #78C0FF;
+  margin-left: 90px;
+  gap: 15px;
+}
+
+.grid-settings-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 623px; 
+}
+
+#grid-size,
+.slidecontainer p {
+  color: #0080EE;
+}
+
+.main-container-outline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #78c0ff;
+}
+
+/* https://stackoverflow.com/questions/41884538/how-to-change-html5-color-input-inner-radius */
+
+#lines {
+  -webkit-appearance: none;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: #D8EDFF;
+  cursor: pointer;
+  
+}
+
+#lines::-webkit-color-swatch {
+  border: 1px solid #78C0FF;
+  border-radius: 50%;
+  padding: 0;
+}
+
+#lines::-webkit-color-swatch-wrapper {
+  border: 1px solid #78C0FF;
+  border-radius: 50%;
+  padding: 0;
+}
+
+#bgColor {
+  -webkit-appearance: none;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: #D8EDFF;
+  cursor: pointer;
+  
+}
+
+#bgColor::-webkit-color-swatch {
+  border: 1px solid #78C0FF;
+  border-radius: 50%;
+  padding: 0;
+}
+
+#bgColor::-webkit-color-swatch-wrapper {
+  border: 1px solid #78C0FF;
+  border-radius: 50%;
+  padding: 0;
 }
 
